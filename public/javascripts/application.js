@@ -14,9 +14,9 @@ $(function() {
       });
 
       request.done(function(data, textStatus, jqXHR) {
-        if (jqXHR.status == 204) {
+        if (jqXHR.status === 204) {
           form.parent("li").remove();
-        } else if (jqXHR.status == 200) {
+        } else if (jqXHR.status === 200) {
           document.location = data;
         }
       });

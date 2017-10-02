@@ -1,11 +1,11 @@
 <ul id="lists">
-  <% sort_lists(@lists) do |list, index| %>
+  <% sort_lists(@lists) do |list| %>
     <% if list_complete?(list) %>
       <li class="complete">
     <% else %>
       <li>
     <% end %>
-      <a href = "lists/<%= index %>">
+      <a href = "lists/<%= list[:id] %>">
         <h2><%= list[:name] %></h2>
         <p><%= todos_remaining_todo(list) %>/<%= todo_count(list) %></p>
       </a>
